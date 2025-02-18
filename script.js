@@ -35,8 +35,7 @@ const countryTimezones = {
 
 // Function to fetch and display weather data
 const getWeatherData = (country) => {
-  const apiKey = "AIzaSyDevTWkIiWTzHeul2RS8Ac26TXEgTWkzNw";
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${apiKey}&units=metric`)
+  fetch(`https://goweather.herokuapp.com/weather/${country}`)
     .then((response) => response.json())
     .then((data) => {
       createWeatherCard(country, data);
